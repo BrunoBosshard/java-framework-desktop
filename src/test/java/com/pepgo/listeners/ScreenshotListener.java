@@ -51,6 +51,9 @@ public class ScreenshotListener extends TestListenerAdapter {
             String screenshotDirectory = System.getProperty("screenshotDirectory", "target/screenshots");
             String screenshotAbsolutePath = screenshotDirectory + File.separator + System.currentTimeMillis() + "_" + failingTest.getName() + ".png";
             File screenshot = new File(screenshotAbsolutePath);
+            if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+                screenshotAbsolutePath = screenshotAbsolutePath.replace("/", "\\");    // Replace "/" with "\"
+            }
             if (createFile(screenshot)) {
                 try {
                     writeScreenshotToFile(driver, screenshot);
