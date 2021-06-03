@@ -124,6 +124,6 @@ public class BasicTestIT extends DriverBase {
 
         System.out.println("Page title is: " + driver.getTitle());
         // This test is deliberately failing, as the  page title is no longer just "Google"
-        Assert.assertTrue(driver.getTitle().equals("Google"));
+        Assert.assertEquals(driver.getTitle(), "Google");
     }
 }
