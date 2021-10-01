@@ -1,2 +1,2 @@
-# selenium-framework-desktop
-A Selenium (desktop) framework with Apache Maven, TestNG, Docker, and REST-assured.
+# java-framework-desktop
+A Selenium / Playwright / REST-assured (desktop) Java framework using Apache Maven, TestNG, and Docker.
